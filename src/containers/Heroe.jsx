@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from "react-router";
 import { getHeroeById } from "../selectors/filters";
-import { Container, Row, Card } from 'react-bootstrap'
+import { Container, Row, Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap'
 
 const Heroe = () => {
     const {id} = useParams();
@@ -17,10 +17,13 @@ const Heroe = () => {
                     <div className="col-8">
                         <Card.Body>
                             <Card.Title>{heroe.superhero}</Card.Title>
-                            <p>{heroe.alter_ego}</p>
-                            <p>{heroe.first_appearance}</p>
-                            <p>{heroe.characters}</p>
                         </Card.Body>
+                        <ListGroup>
+                            <ListGroupItem>Alter Ego: {heroe.alter_ego}</ListGroupItem>
+                            <ListGroupItem>Publisher: {heroe.publisher}</ListGroupItem>
+                            <ListGroupItem>First Appearance: {heroe.first_appearance}</ListGroupItem>
+                            <ListGroupItem>Characters: {heroe.characters}</ListGroupItem>
+                        </ListGroup>
                     </div>
                 </Row>
             </Card>
