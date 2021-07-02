@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from "react-router";
 import { getHeroeById } from "../selectors/filters";
-import { Container, Row, Card, ListGroup, ListGroupItem, Button } from 'react-bootstrap'
+import { Container, Row, Card, ListGroup, ListGroupItem } from 'react-bootstrap'
 
 const Heroe = () => {
     const {id} = useParams();
